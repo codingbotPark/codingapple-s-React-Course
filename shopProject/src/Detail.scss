@@ -1,0 +1,42 @@
+
+$메인컬러:#ff0000;
+
+// 애니메이션 시작 때
+.wow-enter{
+    opacity: 0;
+}
+// 애니메이션 동작 때
+.wow-enter-active{
+    opacity: 1;
+    transition: all 500ms;
+}
+
+.red{
+    color:$메인컬러
+}
+
+//sass에서는 함수를 mixin으로 한다
+@mixin 함수() {
+    background: #eeeeee;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+
+.my-alert{
+    //sass에서 mixin을 사용할 땐 include를 해준다
+    p{
+        margin: 0px
+    }
+
+    @include 함수()
+}
+
+
+.my-alert2 {
+    @extend .my-alert;
+    // extend로 복붙과 같은 효과를 낼 수있다
+    background: #ffe591;
+}
