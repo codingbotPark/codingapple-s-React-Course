@@ -17,7 +17,7 @@ function App() {
   let [shoes, shoes변경] = useState(Data);
   let [재고, 재고변경] = useState([10, 11, 12]);
 
-  console.log(재고context);
+  console.log(재고context); 
 
   return (
     <div className="App">
@@ -39,6 +39,7 @@ function App() {
       </Navbar>
 
       <Switch>
+
         <Route exact path="/">
           <div className="background">
             <h2>I want to sell you somthing</h2>
@@ -106,6 +107,8 @@ function App() {
         <Route path="/:id">
           <div>아무거나찍었을때 이거 보여주셈</div>
         </Route>
+
+        
       </Switch>
 
       {/* Route를 쓰는 다른 방법
